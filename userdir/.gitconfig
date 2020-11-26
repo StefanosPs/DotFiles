@@ -1,0 +1,29 @@
+[filter "lfs"]
+	useJGitBuiltin = true
+	required = true
+[user]
+	name = Stefanos Psarras
+	email = stepsarras@gmail.com
+[alias]
+	st = status
+        ci = commit
+        co = checkout
+        br = branch
+        recommit = commit --amend -m
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset ' --abbrev-commit --date=relative --author-date-order
+[color]
+        branch = auto
+        diff = auto
+        interactive = auto
+        status = auto
+[merge]
+        log = true
+        summary = true
+        ff = false
+[core]
+        autocrlf = false
+	excludesfile = ~/.gitignore_global
+	editor = vim
+
+[rerere]
+	enable = true

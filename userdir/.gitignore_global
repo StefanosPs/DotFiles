@@ -1,0 +1,9 @@
+# Backup files
+*.backup
+*.*~
+
+# Logs 
+*.log
+
+#TMP folder
+tmp/
