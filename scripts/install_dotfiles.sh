@@ -2,7 +2,7 @@
 #
 # Update logged in user files from src files
 
-files=(bash_aliases bash_logout bash_prompt bash_profile bashrc editorconfig path gitconfig gitignore_global)
+files=(bash_aliases bash_logout bash_prompt bash_profile bashrc editorconfig path gitconfig gitignore_global vimrc)
 
 echo "num of arguments $#"
 
