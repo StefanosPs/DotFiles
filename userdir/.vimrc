@@ -20,21 +20,45 @@ set directory=~/.vim/swaps
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
+source ~/.vim/plugins.vim
 
+" Enable syntax highlighting
+syntax enable
 "Always show current position
 set ruler
 
 " Enable line numbers
 set number
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable
+
+" Searching 
+set hlsearch
+set incsearch
+
+
+" 
+" Mapping
+"
+" :h key-codes will show the key binding (What is <A-...>)
+" :h index will show the default VIM mapping
+" :map will show your key mapping
+"
+nmap <Leader><space> :nohlsearch<cr>
+
+nmap <C-_> :NERDTreeToggle<cr> 
+
+" Split Management
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
+
+
+" Auto sourcing
+augroup autosourcing
+	autocmd!
+	autocmd BufWritePost .vimrc source %
+augroup END
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -46,7 +70,6 @@ try
 catch
 endtry
 
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -56,4 +79,20 @@ if has("gui_running")
     set guitablabel=%M\ %t
 endif
 
+" Plugins
 
+"
+"	vim-vinegar
+"
+" - in any buffer to hop up to the directory listing and seek to the file you just came from. Keep bouncing to go up, up, up. Having rapid directory access available changes everything.
+" %  Create file
+" d Create folder
+" D Delete File or folder
+" y.  to yank an absolute path for the file under the cursor.
+" CTRL-^ (CTRL-6) for switching back to the previous buffer from the netrw buffer.
+
+"
+"	Xuyuanp/nerdtree-git-plugin
+"
+let g:NERDTreeUseSimpleIndicator = 1
+let g:NERDTreeGitStatusShowIgnored = 1			" show ignored status
