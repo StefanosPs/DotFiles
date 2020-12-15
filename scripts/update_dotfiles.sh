@@ -21,5 +21,10 @@ for file in "${files[@]}"; do
 	#[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
+if [ ! -a ~/.vim/plugins.vim  ];then
+	cp ~/.vim/plugins.vim ../userdir/.vim/plugins.vim
+	echo -e "\tCopy file "~/.vim/plugins.vim" to ../userdir/.vim/"
+
+fi
 
 exit 0	
