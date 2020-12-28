@@ -1,5 +1,10 @@
 # .bashrc 
 
+if [ -z "$HOME" ]
+then
+     export HOME=~
+fi
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
