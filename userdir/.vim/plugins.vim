@@ -13,6 +13,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'rking/ag.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'prettier/vim-prettier'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
