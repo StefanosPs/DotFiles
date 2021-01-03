@@ -20,13 +20,14 @@ done;
 mkdir -p ~/.vim/backups
 mkdir -p ~/.vim/swaps
 
-if [ ! -a ~/.vim/plugins.vim  ];then
-
-#	echo "file does not exist"
+if [ ! -f ~/.vim/plugins.vim  ];then
+#	filecheck=~/.vim/plugins.vim
+#	echo "file does not exist $filecheck"
 	cp ../userdir/.vim/plugins.vim ~/.vim/plugins.vim
 	mkdir -p ~/.vim/bundle
 	git  -C ~/.vim/bundle clone https://github.com/VundleVim/Vundle.vim.git
-	vim -c ':PluginInstall'
 fi
+
+vim -c ':PluginInstall'
 
 exit 0
