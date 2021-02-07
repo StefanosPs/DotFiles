@@ -2,7 +2,7 @@
 #
 # Update logged in user files from src files
 
-files=(bash_aliases bash_logout bash_prompt bash_profile bashrc editorconfig path gitconfig gitignore_global)
+files=(bash_aliases bash_logout bash_prompt bash_profile bashrc editorconfig path gitconfig gitignore_global vimrc)
 
 echo "num of arguments $#"
 
@@ -17,4 +17,16 @@ for file in "${files[@]}"; do
 done;
 
 
-exit 0	
+mkdir -p ~/.vim/backups
+mkdir -p ~/.vim/swaps
+
+if [ ! -a ~/.vim/plugins.vim  ];then
+
+#	echo "file does not exist"
+	cp ../userdir/.vim/plugins.vim ~/.vim/plugins.vim
+	mkdir -p ~/.vim/bundle
+	git  -C ~/.vim/bundle clone https://github.com/VundleVim/Vundle.vim.git
+	vim -c ':PluginInstall'
+fi
+
+exit 0
