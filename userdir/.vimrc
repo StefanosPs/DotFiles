@@ -47,6 +47,11 @@ nmap <Leader><space> :nohlsearch<cr>
 
 nmap <C-_> :NERDTreeToggle<cr> 
 
+
+"-------------Split Management--------------"
+set splitbelow 								"Make splits default to below...
+set splitright								"And to the right. This feels more natural.
+
 " Split Management
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
