@@ -7,3 +7,8 @@
 
 #TMP folder
 tmp/
+
+2del/
+
+
+docker-compose-dev-stepsarras.yml
