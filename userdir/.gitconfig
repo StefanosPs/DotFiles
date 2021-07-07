@@ -8,8 +8,8 @@
 	st = status
         ci = commit
         co = checkout
-        br = branch
-        recommit = commit --amend -m
+        br = branch --sort=-committerdate
+        recommit = commit --amend 
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset ' --abbrev-commit --date=relative --author-date-order
 [color]
         branch = auto
