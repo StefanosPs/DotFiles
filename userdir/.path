@@ -5,22 +5,28 @@ PATH=$PATH:$HOME/bin
 #Node JS
 PATH=$PATH:"./node_modules/.bin"
 
+#PHP
+PATH=$PATH:"./vendor/bin"
+
 # Laravel
 PATH=$PATH:$HOME/.config/composer/vendor/bin
-PATH=$PATH:"./vendor/bin"
 
 PATH=$PATH:"./bin"
 
-if [ ! -d  ~/.local/bin ];then	
+if [ ! -d  ~/.local/bin ];then
     #Android
-    export ANDROID_HOME=$HOME/Android/Sdk 
+    export ANDROID_HOME=$HOME/Android/Sdk
     PATH=$PATH:$ANDROID_HOME/emulator
     PATH=$PATH:$ANDROID_HOME/tools
     PATH=$PATH:$ANDROID_HOME/tools/bin
     PATH=$PATH:$ANDROID_HOME/platform-tools
 fi
 
+PATH="/opt/homebrew/bin:$PATH"
+PATH="/opt/homebrew/sbin:$PATH"
+
 export PATH
 
-# set CDPATH 
-CDPATH="/:~:~/projects:" 
+# set CDPATH
+CDPATH="/:~:~/projects:~/code_seed/customers/"
+

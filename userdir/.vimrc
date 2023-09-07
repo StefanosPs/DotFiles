@@ -31,12 +31,12 @@ set ruler
 set number
 
 
-" Searching 
+" Searching
 set hlsearch
 set incsearch
 
 
-" 
+"
 " Mapping
 "
 " :h key-codes will show the key binding (What is <A-...>)
@@ -45,7 +45,7 @@ set incsearch
 "
 nmap <Leader><space> :nohlsearch<cr>
 
-nmap <C-_> :NERDTreeToggle<cr> 
+nmap <C-_> :NERDTreeToggle<cr>
 
 
 "-------------Split Management--------------"
@@ -84,6 +84,9 @@ if has("gui_running")
     set guitablabel=%M\ %t
 endif
 
+" Start NERDTree and leave the cursor in it.
+" autocmd VimEnter * NERDTree | wincmd p
+
 " Plugins
 
 "
@@ -97,11 +100,12 @@ endif
 " CTRL-^ (CTRL-6) for switching back to the previous buffer from the netrw buffer.
 
 "
-"	Xuyuanp/nerdtree-git-plugin
+"	Xu/lyuant::::/nerdtree-git-plugin
 "
 let g:NERDTreeUseSimpleIndicator = 1
 let g:NERDTreeGitStatusShowIgnored = 1			" show ignored status
 
+" Start NERDTree and leave the cursor in it.
 "
 "	honza/vim-snippets
 "
