@@ -1,4 +1,3 @@
-" Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
 " Sets how many lines of history VIM has to remember
@@ -31,12 +30,12 @@ set ruler
 set number
 
 
-" Searching
+" Searching 
 set hlsearch
 set incsearch
 
 
-"
+" 
 " Mapping
 "
 " :h key-codes will show the key binding (What is <A-...>)
@@ -45,7 +44,7 @@ set incsearch
 "
 nmap <Leader><space> :nohlsearch<cr>
 
-nmap <C-_> :NERDTreeToggle<cr>
+nmap <C-_> :NERDTreeToggle<cr> 
 
 
 "-------------Split Management--------------"
@@ -85,7 +84,7 @@ if has("gui_running")
 endif
 
 " Start NERDTree and leave the cursor in it.
-" autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p 
 
 " Plugins
 
